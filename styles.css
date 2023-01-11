@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@font-face {
+    font-family: "ResidentEvil";
+    src: url(Fonts/resident_evil_7.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    /* size of element is determined by added padding */
+    font-family: Roboto Mono;
+    color: #777;
+}
+/* everything element */
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/* removing white space from html */
+
+.nav ul{
+    margin: 0;
+    /* all ul inside nav have no margin */
+}
+
+.nav li{
+    display: inline;
+    /* put all elements in li on one line */
+}
+
+.nav a {
+    display: inline;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+    /* edit all links, add padding, change color, and remove line from bottom */
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-bottom: .5em;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    /* center change font, add horiz line at bottom */
+}
+
+.main-nav li{
+    padding: 0 5%;
+}
+
+
+.main-header{
+    background-color: rgba(0, 0, 0, .4);
+    /* 2nd background layer colored black with 60% opacity */
+    background-image: url("Images/header.jpg");
+    background-blend-mode: multiply;
+    /* combine two backgrounds */
+    background-size: cover;
+    /* basically "fill" */
+    padding-bottom: 30px;
+}
+
+.game-name{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "ResidentEvil";
+    font-weight: normal;
+    color: white;
+}
+
+.game-name-large{
+    font-size: 9em;
+}
+/* game name sets for both game names used, large is used only for header 1 */
+
+.content-section{
+    margin: 1em;
+    /* keeps content from being against edges of page */
+}
+
+.container{
+    max-width: 900px;
+    /* sets max length for text */
+    margin: 0 auto;
+    /* margin on left and right is auto fixed */
+    padding: 0 1.5em;
+}
+
+.section-header{
+    font-family: "ResidentEvil";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 4em;
+}
+
+.about-game-image{
+    /* float: left; makes text go around image*/
+    width: 800px;
+    margin: 15px;
+    box-shadow: 10px 10px;
+    /* border-radius: 50%; rounds iamge */
+    
+}
+
+.hanging-indent{
+    text-align: -.75em;
+}
+
+.main-footer{
+    background: black;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    /* makes ul in footer grow as far right as possible */
+    text-align: end;
+}
+
+.footer-nav li{
+    padding: 0, .5em;
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    border: 2px solid white;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.game-row{
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.game-row:last-child{
+    border-bottom: none;
+    /* selects last element of class */
+}
+
+.game-item{
+    text-align: center;
+    display: inline-block;
+    font-size: large;
+
+}
+
+.game-date{
+    color: #555;
+    width: 11%
+
+}
+
+.game-number{
+    width: 42%;
+    font-weight: bolder;
+}
+
+.game-btn{
+    box-sizing: border-box;
+    max-width: 19%
+}
+
+.btn-primary{
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #333;
+}
+
+.shop-item{
+    margin: 30px;
+}
+
+.shop-item-title{
+    display: block;
+    /* block makes it own line */
+    width: 100%;
+    /* goes across screen */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-img{
+    height: 170px;
+}
+
+.shop-item-details{
+    display: flex;
+    /* to align on same line */
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price{
+    flex-grow: 1;
+    /* takes as much width as possible */
+    color: #333;
+}
+
+.shop-items{
+    display: flex;
+    flex-wrap: wrap;
+    /* if it goes past edge of screen go to new line */
+    justify-content: space-around;
+    /* even amount of space around element in container */
+}
+
+.cart-header{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex;
+}
+
+.cart-item{
+    width: 45%;
+}
+
+.cart-price{
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity{
+    width: 35%;
+}
+
+.cart-item-title{
+    color: #333;
+    margin-left: .5em;
+    font-size: 1em;
+}
+
+.cart-item-img{
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+}
+
+.btn-danger{
+    color: white;
+    background-color: #eb5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+
+}
+
+.btn-danger:hover{
+    background-color: #cc4c4c;
+}
+
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+
+}
+
+.cart-row:last-child{
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;
+}
+
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+
+}
